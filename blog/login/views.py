@@ -1,3 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import UserForm
 
-# Create your views here.
+def add_user(request):
+    if request.method == "POST":
+        user = UserForm(request.POST)
+        if user.is_valid():
+            user.save ()
+        return redirect('/')
+    else :
+        form =UserForm()
+        return render (request, "add_user.html", {'form': form})
+
+
