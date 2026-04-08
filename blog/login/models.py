@@ -6,6 +6,6 @@ class User (models.Model):
     password = models.CharField (max_length=200)
     first_name = models.CharField (max_length=200)
     last_name = models.CharField (max_length=200)
-    age = models.PositiveBigIntegerField
+    age = models.PositiveIntegerField(null=True)
     balance = models.FloatField(default=0.0)
 
