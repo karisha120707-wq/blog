@@ -11,7 +11,7 @@ def add_user(request):
         user = UserForm(request.POST)
         if user.is_valid():
             user.save()
-        return redirect('users/')
+        return redirect('/users/')
     else :
         form =UserForm()
         return render (request, "add_user.html", {'form': form})

@@ -1,15 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit", value="создать">
-    </form>
-</body>
-</html>
+
+{% extends "base.html" %}
+{% block title %} Добавление пользователя {% endblock title %}
+{% block content %}
+    <head>
+        <body>
+            <form method="POST">
+                {% csrf_token %}
+            <table>
+                    {{ form }}
+            </table>
+            <input type="submit" value = "Send">
+            </form>
+        </body>
+    </head>
+
+{% endblock content %}
