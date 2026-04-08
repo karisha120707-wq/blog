@@ -8,13 +8,13 @@
  font: 15px Arial;
  text-decoration: none;
  color: white;
- border: 1px solid green;
- background-color: green;
+ border: 1px solid #3f4aecb2;
+ background-color: #3f4aecb2;
 }
 #menu a:hover, #menu a.active {
  color: white;
- border: 1px solid green;
- background-color: green;
+ border: 1px solid #3f4aecb2;
+ background-color: #3f4aecb2;
 }
 
 * {

@@ -10,6 +10,7 @@
             <td>Фамилия</td>
             <td>Возраст</td>
             <td>Баланс</td>
+            <td>Роль</td>
         </tr>
     </thead>
 
@@ -22,9 +23,11 @@
                 <td>{{ user.last_name }}</td>
                 <td>{{ user.age }}</td>
                 <td>{{ user.balnce }}</td>
+                <td>{{ user.role }}</td>
             </tr>
         {% endfor %}
     </tbody>
 </table>
 <a href="/add_user">Добавить пользователя</a>
+<a href="/add_role">Добавить роль</a>
 {% endblock content %}

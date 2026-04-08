@@ -1,6 +1,16 @@
 from django.shortcuts import render, redirect
-from .forms import UserForm
+from .forms import UserForm, RoleForm
 from .models import User
+
+def add_role (request):
+    if request.method == "POST":
+        role = RoleForm(request.POST)
+        if role.is_valid():
+            role.save()
+        return redirect('/users/')
+    else :
+        form =RoleForm()
+        return render (request, "add_user.html", {'form': form})
 
 def users (request):
     users = User.objects.all()
