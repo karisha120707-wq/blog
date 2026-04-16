@@ -10,7 +10,14 @@
 <body>
     <div id="wrapper">
 	<div id="menu">
-        <a href="/users">Все пользователи</a>
+		<a href="/">Главная</a>
+		<a href="/add_user">Регистрация</a>
+		<a href="/login">Войти</a>
+		{% if user %}
+			<a href="/users">Все пользователи</a>
+			<a href="/logout">Выйти</a>
+		{% endif %}
+		
 	</div>
 	<div id="container">
 		<div id="content">
