@@ -25,5 +25,7 @@ urlpatterns = [
     path('add_role/', views.add_role),
     path('login/', views.login),
     path('logout/', views.logout_view),
-
+    path('page1/', views.for_auth),
+    path('page2/', views.for_director),
+    path('page3/', views.for_manage),
 ]
